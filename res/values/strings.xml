@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TestPageIndicator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="page1">Hi Be, thanks for the quick response, </string>
+
+    <string name="page2">I do have a couple of questions though. 
+        a) I\'m not extending the viewFlipper so can I still use this? b) Will this allow me to detect a swipe gesture whilst 
+        still allowing the child views to have scroll functionality [I can currently achieve this with the activities dispatchTouchEvent want to listen to touch events for a viewFlipper. I\'ve been able to listen to touch events in my activity and then modify the 
+        viewFlipper but these events are fired wherever the user is within the activity and I need to capture touch events specifically on the viewFlipper. 
+        I have tried adding setOnTouchListener but it is not called. I m assuming the viewFlippers children (webviews) are consuming the touch events.
+        Use ViewGroup.onInterceptTouchEvent(MotionEvent)
+You should Reference the Android Documentation as it s usage is quite complicated.
+
+Basic Summary of use:
+        
+
+One solution would be to setOnTouchListener s to each of the webviews but this feels like a hack. Does anyone know another way?
+
+Thanks,
+
+Ian</string>
+    <string name="page3">
+You receive the touch event here. If you want to consume it, return true and control will be passed to the ViewFlipper s onTouchEvent(). 
+Return false and it will continue to be passed to the child. onTouchEvent() should also return true to ensure all further events are returned to </string>
+</resources>

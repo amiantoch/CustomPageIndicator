@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+     >
+    
+     <ScrollView
+         android:id="@+id/scrollview"
+         android:layout_width="match_parent"
+          android:layout_height="20dp"
+        android:layout_weight="4.6"
+         
+          >
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+        >
+       
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/page2"
+            android:textSize="25sp" />
+        
+         
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/page1"
+            android:textSize="25sp" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/page3"
+            android:textSize="25sp" />
+        
+    </ViewFlipper>
+    </ScrollView>
+ 
+    <com.example.testpageindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        style="vpiTitlePageIndicatorStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:padding="10dip" />
+    
+
+</LinearLayout>
