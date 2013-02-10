@@ -5,21 +5,18 @@
     android:weightSum="5"
      >
     
-     <ScrollView
-         android:id="@+id/scrollview"
-         android:layout_width="match_parent"
-          android:layout_height="20dp"
-        android:layout_weight="4.6"
-         
-          >
-
     <ViewFlipper
         android:id="@+id/flipper"
         android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:layout_weight="4.6"
         >
        
-
+		<ScrollView
+	         android:id="@+id/scrollview1"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"         
+	          >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,8 +25,13 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:text="@string/page2"
             android:textSize="25sp" />
+        </ScrollView>
         
-         
+         <ScrollView
+         android:id="@+id/scrollview2"
+         android:layout_width="match_parent"
+	         android:layout_height="match_parent"           
+          >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,6 +40,13 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:text="@string/page1"
             android:textSize="25sp" />
+        </ScrollView>
+        
+         <ScrollView
+         android:id="@+id/scrollview3"
+         android:layout_width="match_parent"
+	         android:layout_height="match_parent"         
+          >
         
         <TextView
             android:layout_width="wrap_content"
@@ -47,9 +56,9 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:text="@string/page3"
             android:textSize="25sp" />
+        </ScrollView>
         
     </ViewFlipper>
-    </ScrollView>
  
     <com.example.testpageindicator.CirclePageIndicator
         android:id="@+id/indicator"
